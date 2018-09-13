@@ -11,7 +11,7 @@ Skitter is a web application with basic social media functionality. Users will b
 
 ngocquy.n4@gmail.com
 
-HTML/CSS/PHP
+Homepage - Settings
 
 ***
 
@@ -19,7 +19,7 @@ HTML/CSS/PHP
 
 justintferrari@gmail.com
 
-Java/Infrastructure
+Authentication - Infrastructure
 
 ***
 
