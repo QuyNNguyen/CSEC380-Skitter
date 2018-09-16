@@ -1,0 +1,3 @@
+message = "testing..."
+
+print message
