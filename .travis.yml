@@ -19,4 +19,4 @@ python:
 install:
     - pip install -r TestFiles/requirements.txt
 
-script: locust --host=http://localhost
+script: locust -f TestFiles/locustfile.py --host=http://localhost
