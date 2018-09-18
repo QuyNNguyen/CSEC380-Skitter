@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+        webserver_one:
+          container_name: webserver1
+          hostname: webserver1
+          build: ./WebServer
+
+        webserver_two:
+          container_name: webserver2
+          hostname: webserver2
+          build: ./WebServer
+             
+        loadbalancer:
+          container_name: balancer
+          hostname: balancer
+          build: ./LoadBalancer
+          ports:
+            - "80:80"
