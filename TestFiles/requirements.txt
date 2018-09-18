@@ -1,3 +1,2 @@
-shlex
 locustio
 subprocess
