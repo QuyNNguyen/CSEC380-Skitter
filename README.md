@@ -15,7 +15,7 @@ UI Design - Settings
 
 ***
 
-**Justin Ferrari**  
+**Justin Ferrari**  [![Build Status](https://travis-ci.org/QuyNNguyen/CSEC380-Skitter.svg?branch=Ferrari)](https://travis-ci.org/QuyNNguyen/CSEC380-Skitter)
 
 justintferrari@gmail.com
 
