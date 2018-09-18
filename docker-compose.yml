@@ -6,14 +6,14 @@ services:
           hostname: webserver1
           build: ./WebServer
 
-          webserver_two:
-              container_name: webserver2
-              hostname: webserver2
-              build: ./WebServer
+        webserver_two:
+          container_name: webserver2
+          hostname: webserver2
+          build: ./WebServer
              
-          loadbalancer:
-              container_name: balancer
-              hostname: balancer
-              build: ./LoadBalancer
-              ports:
-                - "80:80"
+        loadbalancer:
+          container_name: balancer
+          hostname: balancer
+          build: ./LoadBalancer
+          ports:
+            - "80:80"
