@@ -19,4 +19,5 @@ python:
 install:
     - pip install -r TestFiles/requirements.txt
 
-script: sudo TestFiles/WebTest.py
+script: 
+    - sudo python TestFiles/WebTest.py
