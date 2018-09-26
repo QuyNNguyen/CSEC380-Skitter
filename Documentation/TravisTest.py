@@ -1,3 +1,0 @@
-message = "testing..."
-
-print message
