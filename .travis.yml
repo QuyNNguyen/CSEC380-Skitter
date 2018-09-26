@@ -19,4 +19,4 @@ python:
 install:
     - pip install -r TestFiles/requirements.txt
 
-script: TestFiles/WebTest.py
+script: sudo TestFiles/WebTest.py
