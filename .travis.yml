@@ -20,6 +20,5 @@ install:
     - pip install -r TestFiles/requirements.txt
 
 script: 
-    - sudo pwd
-    - sudo ls
+    - sudo ls TestFiles
     - sudo python TestFiles/WebTest.py
