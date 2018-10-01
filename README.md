@@ -1,4 +1,4 @@
-# CSEC380-Skitter [![Build Status](https://travis-ci.org/QuyNNguyen/CSEC380-Skitter.svg?branch=master)](https://travis-ci.org/iAppropriate/skitter)
+# CSEC380-Skitter [![Build Status](https://travis-ci.org/QuyNNguyen/CSEC380-Skitter.svg?branch=master)](https://travis-ci.org/QuyNNguyen/CSEC380-Skitter.svg?branch=master)
 Final project for CSEC380
 
 Secure site creation making use of containers.
