@@ -1,0 +1,62 @@
+#login_form{ 
+	padding-top: 100px;
+	color: #FFFFFF;
+}
+
+
+#signup_button{
+	font-family: "Avenir Next" !important;
+	width: 200px;
+	height:35px;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #FFFFFF;
+	background-color: #4EADC7;
+	color:#FFFFFF;
+}
+
+#login_button{
+	font-family: "Avenir Next" !important;
+	width: 200px;
+	height:35px;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #FFFFFF;
+	background-color: #FFFFFF;
+	color:#4EADC7;
+}
+
+.text_input{
+	font-family: "Avenir Next" !important;
+	width: 300px;
+	height:35px;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #FFFFFF;
+	background-color: #4EADC7;
+	color:#FFFFFF;
+}
+
+.div_break{
+	height: 10px;
+}
+
+.center{
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+input{
+
+}
+
+
+body {
+	background-color: #4EADC7;
+
+}
+
