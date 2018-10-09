@@ -1,0 +1,32 @@
+.header{
+	height:70px;
+	background-color: #4EADC7;
+	color:#FFFFFF;
+	padding-top: 20px;
+
+}
+
+
+.search_box{
+	font-family: "Avenir Next" !important;
+	width: 300px;
+	height:35px;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #FFFFFF;
+	background-color: #4EADC7;
+	color:#FFFFFF;
+}
+
+.center{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.naked_button{
+	font-family: "Avenir Next" !important;
+	border: none;
+	background: none;
+
+}
