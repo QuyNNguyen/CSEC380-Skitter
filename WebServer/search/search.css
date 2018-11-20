@@ -23,3 +23,18 @@
 	text-align: center;
 	margin: 0 auto;
 }
+
+.naked_button{
+	font-family: "Avenir Next" !important;
+	border: none;
+	background: none;
+
+}
+
+img {
+	width: 100px;
+	height: 100px;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #4EADC7;
+}
