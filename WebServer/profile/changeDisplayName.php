@@ -34,6 +34,11 @@ if( isset( $_POST[ 'new_name' ]  ) ) {
 		')'  => '',
 		'`'  => '',
 		'||' => '',
+		'<' => '',
+		'>' => '',
+		'/' => '',
+		'\\' => '',
+
 	);
 
 	// Remove any of the charactars in the array (blacklist).
