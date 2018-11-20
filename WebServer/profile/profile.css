@@ -13,7 +13,18 @@
 }
 
 
+#post_button{
+	font-family: "Avenir Next" !important;
+	width: 200px;
+	height:35px;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #4EADC7;
+	background-color: #4EADC7;
+	color:#FFFFFF;
 
+}
 
 .header{
 	height:70px;
@@ -22,6 +33,7 @@
 	padding-top: 20px;
 
 }
+
 
 .search_box{
 	font-family: "Avenir Next" !important;
@@ -33,8 +45,23 @@
 	border-color: #FFFFFF;
 	background-color: #4EADC7;
 	color:#FFFFFF;
+	padding-left: 10px;
 }
 
+.skit_box{
+	font-family: "Avenir Next" !important;
+	width: 500px;
+	height: 80px;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #4EADC7;
+	background-color: #FFFFFF;
+	color:#4EADC7;
+	padding-left: 10px;
+
+
+}
 
 .invisble{
 	display: none;
