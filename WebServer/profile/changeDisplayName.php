@@ -12,7 +12,7 @@ include_once("connect.php");
 if(!isset($_POST['token'])) {
 	die("Change name from main profile!");
 } else {
-	if (hash_equals($_SESSION['token'], $_GET['token']) === false) {
+	if (hash_equals($_SESSION['token'], $_POST['token']) === false) {
 		die("Invalid session");
 	}
 }	
@@ -43,21 +43,23 @@ if( isset( $_POST[ 'new_name' ]  ) ) {
 
 
 // Update database with new name 
-if($stmt = $mysqli->prepare("UPDATE users SET display_name=? WHERE rit_user=?")){
-	if($stmt->bind_param("si", $new_name, $POST['rit_user'])){
-		if(!$stmt->execute()){
-			die("Error - Issue executing prepared statement: " . mysqli_error($mysqli));
+if(isset($_POST['new_profile_pic'])){
+	if($stmt = $mysqli->prepare("UPDATE users SET display_name=? WHERE rit_user=?")){
+		if($stmt->bind_param("si", $new_name, $_POST['rit_user'])){
+			if(!$stmt->execute()){
+				die("Error - Issue executing prepared statement: " . mysqli_error($mysqli));
+			}
+		}else{
+			die("Error - Issue binding prepared statement: " . mysqli_error($mysqli));
+		}
+		if($stmt->close()){
+			echo "Name changed successfully";
+		}else{
+			die("Error - Failed to close prepared statement" . mysqli_error($mysqli));
 		}
 	}else{
-		die("Error - Issue binding prepared statement: " . mysqli_error($mysqli));
+		die("Error - Issue preparing statement: " . mysqli_error($mysqli));
 	}
-	if($stmt->close()){
-		echo "Name changed successfully";
-	}else{
-		die("Error - Failed to close prepared statement" . mysqli_error($mysqli));
-	}
-}else{
-	die("Error - Issue preparing statement: " . mysqli_error($mysqli));
 }
 
 
