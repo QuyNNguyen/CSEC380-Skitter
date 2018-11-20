@@ -18,10 +18,10 @@
 
   		<!-- Header -->
   		<div class="row header">
-  			<div class="col">
+  			<div class="col-4">
   				<h2>Skitter</h2>
   			</div>
-  			<div class="col">
+  			<div class="col-8">
   				<form>
   					<input type="text" class="search_box" name="search_value" value="Search">
   					<input type="submit" class= "invisible">
@@ -35,11 +35,21 @@
         <div class= "col-1"></div>
   			<div class= "col-3">
   				<img src="" id="profile_pic">
-  				<br><br>
-  				<p> Name </p>
+          <br><br>
+          <form action="/changeProfileImage.php">
+            <input type="file" class="pic_input_box" name="new_profile_pic" accept="image/*">
+            <input type="submit" class="naked_button" value="Change">
+          </form>
+  				<br>
+  				<form action="/changeDisplayName.php">
+            <input type="text" id="name_box" name="new_name" value="Name">
+            <input type="submit" class="naked_button" value="Change">
+          </form>
+          <br>
   				<p> Followers: </p>
   				<p> Followings: </p>
-  				<form><input type="text" id="follow_button" name="follow" value="Follow"></form>
+
+  				<form><input type="submit" id="follow_button" name="follow" value="Follow"></form>
   			</div>
 
 

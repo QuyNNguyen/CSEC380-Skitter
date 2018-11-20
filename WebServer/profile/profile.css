@@ -12,7 +12,11 @@
 
 }
 
-
+#name_box{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
 #post_button{
 	font-family: "Avenir Next" !important;
 	width: 200px;
@@ -62,6 +66,7 @@
 
 
 }
+
 
 .p_skit{
 	font-size: 24px;
