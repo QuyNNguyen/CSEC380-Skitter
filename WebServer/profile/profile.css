@@ -63,6 +63,18 @@
 
 }
 
+.p_skit{
+	font-size: 24px;
+}
+
+.naked_button{
+	font-family: "Avenir Next" !important;
+	color:#4EADC7;
+	border: none;
+	background: none;
+
+}
+
 .invisble{
 	display: none;
 }
