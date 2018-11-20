@@ -43,7 +43,7 @@ if( isset( $_POST[ 'new_name' ]  ) ) {
 
 
 // Update database with new name 
-if($stmt = $mysqli->prepare("UPDATE profiles SET display_name=? WHERE rit_user=?")){
+if($stmt = $mysqli->prepare("UPDATE users SET display_name=? WHERE rit_user=?")){
 	if($stmt->bind_param("si", $new_name, $POST['rit_user'])){
 		if(!$stmt->execute()){
 			die("Error - Issue executing prepared statement: " . mysqli_error($mysqli));
