@@ -3,8 +3,8 @@
 
 
 //authenticate users here
-if(isset($_POST['usr'], $_POST['pass'])){
-    if(!empty($_POST['usr']) && !empty($_POST['pass'])) {
+if(isset($_POST['email'], $_POST['password'])){
+    if(!empty($_POST['email']) && !empty($_POST['password'])) {
         $user = strip_tags($_POST['usr']);
         $pass = strip_tags($_POST['pass']);
         $creds = array( 'eml' => $user, 'passwd' => $pass);
