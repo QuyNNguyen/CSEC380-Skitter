@@ -32,6 +32,6 @@ services:
           environment:
             MYSQL_ROOT_PASSWORD: "supersecurepass"
           volumes:
-            - ./DataBase/skitter.sql/docker-entrypoint-initdb.d/skitter.sql
+            - ./DataBase/skitter.sql:/docker-entrypoint-initdb.d/skitter.sql
             - ./DataBase/data:/var/lib/mysql
 
