@@ -32,6 +32,56 @@ services:
           environment:
             MYSQL_ROOT_PASSWORD: "supersecurepass"
           volumes:
-            - ./DataBase/skitter.sql/docker-entrypoint-initdb.d/skitter.sql
+            - ./DataBase/skitter.sql:/docker-entrypoint-initdb.d/skitter.sql
             - ./DataBase/data:/var/lib/mysql
+        
+        elasticsearch:
+          container_name: elastic
+          hostname: elasticsearch
+          build: ./elasticsearch
+          volumes:
+            - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+          ports:
+            - "9200:9200"
+            - "9300:9300"
+          environment:
+            ES_JAVA_OPTS: "-Xmx256m -Xms256m"
 
+        logstash:
+          container_name: logstash
+          hostname: logstash
+          build: ./logstash
+          volumes:
+            - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+            - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+          ports:
+            - "5000:5000"
+            - "9600:9600"
+          environment:
+            LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+          depends_on:
+            - elasticsearch
+
+        kibana:
+          container_name: kibana
+          hostname: kibana
+          build: ./kibana
+          volumes:
+            - ./kibana/config/:/usr/share/kibana/config:ro
+          ports:
+            - "5601:5601"
+          depends_on:
+            - elasticsearch
+
+        node:
+          container_name: node
+          hostname: node
+          build: ./node
+          working_dir: /home/node/app
+          ports:
+            - "8888:8888"
+          environment:
+            - NODE_ENV=production
+          volumes:
+            - ./node:/home/node/app
+          command: "npm start"

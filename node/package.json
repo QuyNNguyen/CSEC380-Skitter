@@ -1,0 +1,28 @@
+{
+"name": "skit-handler",
+"version": "0.0.0",
+"description": "handles skits for skiter",
+"main": "index.js",
+"scripts": {
+        "start": "node index.js"
+},
+"dependencies": {
+        "express": "^4.13.3",
+            "body-parser": "^1.15.2"
+},
+"engines": {
+        "node": "4.0.0"
+},
+"repository": {
+        "type": "git",
+            "url": ""
+},
+"keywords": [
+        "node",
+            "express"
+],
+"author": "",
+"contributors": [
+],
+"license": ""
+}
