@@ -26,5 +26,5 @@ Authentication - Infrastructure
 **Dan Shen**  
 
 dxs8802@rit.edu
-test
+
 User Interaction
