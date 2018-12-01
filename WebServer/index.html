@@ -27,7 +27,7 @@
                 <br><br><br>
                 <input type="button" onclick="attemptLogin(document.getElementById('usr').value, document.getElementById('pass').value);" id="login_button" value="Login">
                 <div class= "div_break"></div>
-                <input type="button" onclick="attemptRegister(document.getElementById('eml').value, document.getElementById('display').value);" id= "signup_button" value="Signup">
+                <input type="button" onclick="attemptRegister(document.getElementById('usr').value);" id= "signup_button" value="Signup">
             </form>
 
         </div>
@@ -37,7 +37,7 @@
 
 
         <script>
-function attemptLogin(usr, pass){
+function attemptLogin(usri, pass){
     var xhttp = new XMLHttpRequest(),
     suc="success";
 
@@ -58,7 +58,7 @@ function attemptLogin(usr, pass){
 }
         </script>
         <script>
-function attemptRegister(eml, display){
+function attemptRegister(eml){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -71,7 +71,7 @@ function attemptRegister(eml, display){
     };
     xhttp.open("POST", "/register.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-    xhttp.send("eml="+eml+"&usr=TempValue&display="+display);
+    xhttp.send("eml="+eml);
 }
         </script>
 
