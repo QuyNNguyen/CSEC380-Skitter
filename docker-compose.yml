@@ -23,14 +23,19 @@ services:
           hostname: authserver
           build: ./AuthenticationServer
           ports:
-            - "12345:12345"
+            - "8080:8080"
+          links:
+              - 'database' 
 
         database:
           container_name: mysql-db
           hostname: mysql-db
-          image: mysql
+          image: mysql:5.6
           environment:
             MYSQL_ROOT_PASSWORD: "supersecurepass"
+            MYSQL_DATABASE: "skitter"
+          ports:
+            - "3306:3306"
           volumes:
             - ./DataBase/skitter.sql:/docker-entrypoint-initdb.d/skitter.sql
             - ./DataBase/data:/var/lib/mysql
