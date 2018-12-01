@@ -12,5 +12,6 @@ if(isset($_POST['eml'])){
         curl_close($curl);
         echo htmlspecialchars("$response", ENT_QUOTES, 'UTF-8');
     }
-}   
+}  
 ?>
+
