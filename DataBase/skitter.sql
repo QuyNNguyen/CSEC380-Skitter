@@ -36,3 +36,9 @@ CREATE TABLE `sessions` (
       UNIQUE KEY `username_UNIQUE` (`username`),
       UNIQUE KEY `session_id_UNIQUE` (`session_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+OCK TABLES `follows` WRITE;
+/*!40000 ALTER TABLE `follows` DISABLE KEYS */;
+INSERT INTO `follows` VALUES ('bob1234','joe5678'),('joe5678','bob1234');
+/*!40000 ALTER TABLE `follows` ENABLE KEYS */;
+UNLOCK TABLES;

@@ -23,7 +23,7 @@
   			</div>
   			<div class="col-8">
   				<form>
-  					<input type="text" class="search_box" name="search_value" value="Search">
+  					<input type="text" class="search_box" name="search_value" placeholder="Search">
   					<input type="submit" class= "invisible">
   				</form>
   			</div>
@@ -55,8 +55,8 @@
 
 
   			<div class= "col-8">
-          <form>
-            <input type="text" class="skit_box" name="skit" value="What's on your mind?">
+          <form action='skitHandler.php', method='post'>
+            <input type="text" class="skit_box" name="skit" placeholder="What's on your mind?">
             <br><br>
             <input type="submit" id="post_button" value="Post">
           </form>

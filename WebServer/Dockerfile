@@ -1,4 +1,7 @@
-FROM nginx
+FROM php:7.0-apache
 
-COPY index.html /usr/share/nginx/html
-COPY index.css /usr/share/nginx/html
+RUN docker-php-source extract && \ 
+    docker-php-ext-install mysqli \
+    && docker-php-source delete
+
+ADD ./ /var/www/html/
