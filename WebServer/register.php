@@ -1,7 +1,7 @@
 <?php
-if(isset($_POST['eml'])){
-    if(!empty($_POST['eml'])) {
-        $creds = array( 'eml' => $_POST['eml']);
+if(isset($_POST['usr'], $_POST['eml'], $_POST['display'])){
+    if(!empty($_POST['usr']) && !empty($_POST['eml']) && !empty($_POST['display'])) {
+        $creds = array( 'usr' => $_POST['usr'], 'display' => $_POST['display'], 'eml' => $_POST['eml']);
         $url = 'http://authserver:8080/register';
         $curl = curl_init($url);
         $curlString = http_build_query($creds, '', '&');
@@ -12,6 +12,5 @@ if(isset($_POST['eml'])){
         curl_close($curl);
         echo htmlspecialchars("$response", ENT_QUOTES, 'UTF-8');
     }
-}  
+}   
 ?>
-
