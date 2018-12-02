@@ -37,7 +37,7 @@
 
 
         <script>
-function attemptLogin(usri, pass){
+function attemptLogin(usr, pass){
     var xhttp = new XMLHttpRequest(),
     suc="success";
 
@@ -47,7 +47,7 @@ function attemptLogin(usri, pass){
             if(~this.responseText.indexOf(suc)){
                 window.location.href='profile/index.html';
             }else{
-                document.getElementById("response").innerHTML = "Login Failed";
+                document.getElementById("response").innerHTML = this.responseText;
             }
         }
 
