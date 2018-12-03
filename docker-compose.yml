@@ -90,3 +90,8 @@ services:
           volumes:
             - ./node:/home/node/app
           command: "npm start"
+
+        flask:
+          container_name: flask
+          hostname: flask
+          build: ./python

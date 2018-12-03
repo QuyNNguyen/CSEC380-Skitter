@@ -15,7 +15,7 @@
 
 
 
-  <body>
+  <body onload='search();'>
   	<div class="container-fluid">
 
   		<!-- Header -->
@@ -35,24 +35,23 @@
       <!-- Comment the following block out after finish -->
   		<div class= "row">
   			<div class="col center">
-  				<h2>PHP to fetch user from database here, use example code below</h2>
   			</div>
   		</div>
 
-
-
-      <!-- Example block of code -->
       <div class= "row">
         <div class="col-2"></div>
         <div class="col-3"><img src=""></div>
-        <div class= "col-4"><br><br><br>Name</div>
+        <div class= "col-4" id='name'><br><br><br>Name</div>
         <div class="col-2"><br><br><br><input type="submit" class="naked_button" value="Follow"></div>
       </div>
       <hr>
 
   	</div>
-  </body>
-
+  <script>
+function search(){
+    document.getElementById('name').innerHTML = location.search.substr(1);
+}
+  </script>
       <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

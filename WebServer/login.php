@@ -22,7 +22,7 @@ if(isset($_POST['email'], $_POST['password'])){
                 echo "success";
             }
         }else{
-            echo "fail";
+            echo $code;
         }
     }
 }
